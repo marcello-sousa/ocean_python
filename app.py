@@ -2,23 +2,22 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-#POST MOCK
-
+# POSTS MOCK
 posts = [
     {
-        "Título": "Post 1",
-        "Texto": "Meu primeiro blog"
+        "titulo": "Post 1",
+        "texto": "Meu primeiro Post"
     },
     {
-        "Título": "Post 2",
-        "Texto": "Meu segundo texto"
+        "titulo": "Post 2",
+        "texto": "Olha eu aqui de novo"
+    },
+       {
+        "titulo": "Post 3",
+        "texto": "Novo Post"
     }
 ]
 
-@app.route("/")
+@app.route('/')
 def exibir_entradas():
     return render_template("exibir_entradas.html", entradas=posts)
-
-@app.route("/pudim")
-def pudim():
-    return "Eu gosto de pudim"
