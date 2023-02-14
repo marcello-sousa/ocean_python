@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>
+            Meu blog
+        </title>
+    </head>
+    <body>
+        <h1> Meu Blog </h1>
+        {% for entrada in entradas %} 
+            <h2>{{ entrada['Título'] }}</h2> 
+            <p>{{ entrada['Texto'] }}</p> 
+        {% else %} 
+            <p>Não existem posts feitos ainda!</p> 
+        {% endfor %}
+    </body>
+</html>
